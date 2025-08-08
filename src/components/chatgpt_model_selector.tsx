@@ -1,7 +1,12 @@
 import { chatgptModelOptions, defaultGenerativeAiSettings } from "../constants";
 import { Portal, Select } from "@chakra-ui/react";
 
-const ChatGPTModelSelector = ({ value, onChange }) => {
+interface ChatGPTModelSelectorProps {
+	value: string;
+	onChange: (value: string) => void;
+}
+
+const ChatGPTModelSelector = ({ value, onChange }: ChatGPTModelSelectorProps) => {
 	return (
 		<Select.Root
 			collection={chatgptModelOptions}
